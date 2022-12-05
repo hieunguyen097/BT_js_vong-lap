@@ -55,4 +55,36 @@ function div(){
     document.getElementById("hienthi").innerHTML = content
 }
 
+function KtsonguyenTo(n){
+  var flag = true
+  if (n => 2){
+    for(var i = 2; i <= (n - 1); i++){
+      if(n % (n -1) === 0 ){
+        flag = true;
+        break
+      }
+    }
+  }else{
+    flag = false
+  }
+}
 
+function prime(){
+  var x = document.getElementById("number").value * 1;
+  var primeNumber = '';
+
+  if(x > 0 && x % 1 ==0 ){
+    if(x => 2){
+      for(var i = 2; i <= x; i++){
+        if(KtsonguyenTo() == true){
+          primeNumber += i + " "
+        }
+      }
+    }else{
+      alert("không phải số nguyên tố")
+    }
+  }else{
+    alert('Không phải số nguyên dương')
+  }
+  document.getElementById('prime').innerHTML = primeNumber
+}
